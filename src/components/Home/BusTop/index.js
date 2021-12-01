@@ -2,15 +2,15 @@ import React from 'react';
 import {
   Text,
   View,
-  TouchableOpacity,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { busTop } from '../../../assets/css/BusTop';
+import BusSvg from '../../../assets/img/bus.svg';
 
 export default function BusTop() {
   return (
     <View style={busTop.containerBusTop}>
       <View style={busTop.containerTop}>
+        <BusSvg style={busTop.busSvg} />
         <Text style={busTop.topText}>
           Ponto mais proximo
         </Text>
@@ -38,27 +38,7 @@ export default function BusTop() {
           </Text>
         </View>
       </View>
-      <View style={busTop.containerLocalAndHours}>
-        <View style={busTop.boxLocal}>
-          <TouchableOpacity>
-            <View style={busTop.boxLocalText}>
-              <Icon name="map-marker-outline" size={30} color="#2BB673" />
-              <Text style={busTop.localText}>Local</Text>
-            </View>
 
-          </TouchableOpacity>
-        </View>
-        <View style={busTop.boxHours}>
-          <TouchableOpacity>
-            <TouchableOpacity>
-              <View style={busTop.boxHoursText}>
-                <Icon name="clock-time-four-outline" size={30} color="#aaaa" />
-                <Text style={busTop.hoursText}>Horário</Text>
-              </View>
-            </TouchableOpacity>
-          </TouchableOpacity>
-        </View>
-      </View>
     </View>
   );
 }

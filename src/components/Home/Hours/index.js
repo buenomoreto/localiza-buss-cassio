@@ -2,15 +2,16 @@ import React from 'react';
 import {
   Text,
   View,
-  TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { hours } from '../../../assets/css/Hours';
+import BusSvg from '../../../assets/img/bus.svg';
 
 export default function Hours() {
   return (
     <View style={hours.containerHours}>
       <View style={hours.containerTop}>
+        <BusSvg style={hours.busSvg} />
         <Text style={hours.topText}>
           Ponto mais proximo
         </Text>
@@ -29,27 +30,6 @@ export default function Hours() {
             <Text><Icon name="bell-outline" size={35} color="#fff" /></Text>
             <View style={hours.boxHoursReminderText}><Text>Criar lembrete</Text></View>
           </View>
-        </View>
-      </View>
-      <View style={hours.containerLocalAndHours}>
-        <View style={hours.boxLocal}>
-          <TouchableOpacity>
-            <View style={hours.boxLocalText}>
-              <Icon name="map-marker-outline" size={30} color="#AAAAAA" />
-              <Text style={hours.localText}>Local</Text>
-            </View>
-
-          </TouchableOpacity>
-        </View>
-        <View style={hours.boxHours}>
-          <TouchableOpacity>
-            <TouchableOpacity>
-              <View style={hours.boxHoursText}>
-                <Icon name="clock-time-four-outline" size={30} color="#FFC55A" />
-                <Text style={hours.hoursText}>Horário</Text>
-              </View>
-            </TouchableOpacity>
-          </TouchableOpacity>
         </View>
       </View>
     </View>

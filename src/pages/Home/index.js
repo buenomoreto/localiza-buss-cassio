@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  SafeAreaView, Text, View,
+  SafeAreaView, Text, View, TouchableOpacity, Image,
 } from 'react-native';
 
 import MapView, { Marker } from 'react-native-maps';
@@ -10,10 +10,15 @@ import { home } from '../../assets/css/Home';
 import points from '../../components/InfosRoutes/index.json';
 import Local from '../../components/Home/BusTop';
 import Hours from '../../components/Home/Hours';
+import { busTop } from '../../assets/css/BusTop';
+import PointsSvg from '../../assets/img/point.svg';
+
+const HOURS = 'hours';
+const LOCAL = 'local';
 
 export default function Home() {
   const [markers, setMarkers] = useState([]);
-  
+
   useEffect(() => {
     setMarkers(points);
   });
@@ -25,6 +30,8 @@ export default function Home() {
     longitudeDelta: 0.0421,
   };
 
+  const [popup, setPopup] = useState('');
+
   return (
     <SafeAreaView style={home.containerHome}>
       <MapView
@@ -35,20 +42,48 @@ export default function Home() {
       markers.map((item) => (
         <Marker
           key={item.point.id}
+          onPress={() => setPopup(LOCAL)}
           coordinate={{
             latitude: item.point.latitude,
             longitude: item.point.longitude,
           }}
         >
-          <View style={home.marker}>
-            <Text><Icon name="bus-marker" size={30} color="#2BB673" /></Text>
+          <View>
+            <PointsSvg />
           </View>
         </Marker>
       ))
     }
       </MapView>
-      <Local />
-      <Hours />
+      {popup === LOCAL && <Local />}
+      {popup === HOURS && <Hours />}
+      {
+        (popup === LOCAL || popup === HOURS) && (
+        <View style={home.info}>
+          <View style={busTop.containerLocalAndHours}>
+            <View style={busTop.boxLocal}>
+              <TouchableOpacity onPress={() => setPopup(LOCAL)}>
+                <View style={busTop.boxLocalText}>
+                  <Icon name="map-marker-outline" size={30} color={popup === LOCAL ? '#2BB673' : '#aaaa'} />
+                  <Text style={popup === LOCAL ? busTop.active : busTop.localText}>Local</Text>
+                </View>
+
+              </TouchableOpacity>
+            </View>
+            <View style={busTop.boxHours}>
+              <TouchableOpacity onPress={() => setPopup(HOURS)}>
+                <View style={busTop.boxHoursText}>
+                  <Icon name="clock-time-four-outline" size={30} color={popup === HOURS ? '#FFC55A' : '#aaaa'} />
+                  <Text style={popup === HOURS ? busTop.activeHours : busTop.hoursText}>
+                    Horário
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+        )
+      }
     </SafeAreaView>
   );
 }
