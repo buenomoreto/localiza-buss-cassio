@@ -7,6 +7,7 @@ import {
   Text,
   Dimensions,
   TextInput,
+  TouchableHighlight,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -16,7 +17,10 @@ export default function Reminder() {
   const params = useRoute();
   const [address, setAddress] = useState();
   const [title, setTitle] = useState('');
-
+  const [titleActive, setTitleActive] = useState('');
+  function activeTitle() {
+    setTitleActive(title);
+  }
   useEffect(() => {
     fetch(`https://nominatim.openstreetmap.org/reverse?lat=${params.params.latitude}&lon=${params.params.longitude}&format=json`).then(
       async (request) => {
@@ -31,16 +35,20 @@ export default function Reminder() {
         <View style={styles.containerReminderRow}>
           <View style={styles.containerReminderRowChildren}>
             <Icon name="bell" size={35} color="#00283B" />
-            {title === ''
+            {titleActive === ''
             && (
-            <TextInput
-              placeholderTextColor="#00283B"
-              onChangeText={setTitle}
-              value={title}
-              placeholder="Dígite nome do Lembrete"
-            />
+            <View style={styles.containerInputRow}>
+              <TextInput
+                placeholderTextColor="#00283B"
+                onChangeText={setTitle}
+                value={title}
+                placeholder="Dígite nome do Lembrete"
+              />
+              <TouchableHighlight style={styles.button} onPress={activeTitle}><Text style={styles.buttonText}>Enviar</Text></TouchableHighlight>
+            </View>
             )}
-            {title !== '' && <Text style={styles.containerReminderText}>{title}</Text>}
+
+            <Text style={styles.containerReminderText}>{titleActive}</Text>
           </View>
           <Icon name="close" size={35} color="#00283B" />
         </View>
@@ -85,6 +93,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 15,
     width: width - 50,
+    position: 'relative',
   },
   containerReminderRow: {
     flexDirection: 'row',
@@ -110,5 +119,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginRight: 5,
     fontSize: 14,
+  },
+  containerInputRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#00283B',
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
   },
 });
