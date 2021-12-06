@@ -17,7 +17,7 @@ export const home = StyleSheet.create({
     bottom: 0,
     backgroundColor: '#fff',
     paddingVertical: 15,
-    width: width - 20,
+    width,
   },
 
 });

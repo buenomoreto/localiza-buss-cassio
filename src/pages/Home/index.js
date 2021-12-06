@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  SafeAreaView, Text, View, TouchableOpacity, Image,
+  SafeAreaView, Text, View, TouchableOpacity,
 } from 'react-native';
 
 import MapView, { Marker } from 'react-native-maps';
@@ -18,10 +18,8 @@ const LOCAL = 'local';
 
 export default function Home() {
   const [markers, setMarkers] = useState([]);
-
-  useEffect(() => {
-    setMarkers(points);
-  });
+  const [itemMark, setItemMark] = useState();
+  const [popup, setPopup] = useState('');
 
   const region = {
     latitude: -21.2892,
@@ -30,7 +28,9 @@ export default function Home() {
     longitudeDelta: 0.0421,
   };
 
-  const [popup, setPopup] = useState('');
+  useEffect(() => {
+    setMarkers(points);
+  });
 
   return (
     <SafeAreaView style={home.containerHome}>
@@ -42,7 +42,7 @@ export default function Home() {
       markers.map((item) => (
         <Marker
           key={item.point.id}
-          onPress={() => setPopup(LOCAL)}
+          onPress={() => { setPopup(LOCAL); setItemMark(item.point); }}
           coordinate={{
             latitude: item.point.latitude,
             longitude: item.point.longitude,
@@ -55,8 +55,8 @@ export default function Home() {
       ))
     }
       </MapView>
-      {popup === LOCAL && <Local />}
-      {popup === HOURS && <Hours />}
+      {popup === LOCAL && <Local marker={itemMark} />}
+      {popup === HOURS && <Hours marker={itemMark} />}
       {
         (popup === LOCAL || popup === HOURS) && (
         <View style={home.info}>

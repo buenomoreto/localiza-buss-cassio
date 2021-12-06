@@ -13,7 +13,7 @@ export const hours = StyleSheet.create({
     backgroundColor: '#fff',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    width: width - 20,
+    width,
     minHeight: 280,
   },
   containerTop: {
@@ -83,7 +83,7 @@ export const hours = StyleSheet.create({
     borderRadius: 20,
   },
   containerLocalAndHours: {
-    borderTopColor: '#C4C4C4',
+    borderTopColor: '#F2F2F2',
     borderTopWidth: 1,
     width: ' 100%',
     flexDirection: 'row',

@@ -6,6 +6,8 @@ import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Splash from './src/pages/Splash';
 import Home from './src/pages/Home';
+import Reminder from './src/pages/Reminder';
+import Menu from './src/components/Menu';
 
 function splashScreen() {
   return (
@@ -14,10 +16,17 @@ function splashScreen() {
     </View>
   );
 }
-
+function reminderScreen() {
+  return (
+    <View style={styles.container}>
+      <Reminder />
+    </View>
+  );
+}
 function Root() {
   return (
     <Drawer.Navigator
+      drawerContent={(props) => <Menu {...props} />}
       screenOptions={{
         drawerActiveBackgroundColor: 'transparent',
         drawerStyle: {
@@ -40,6 +49,7 @@ function Root() {
       }}
     >
       <Drawer.Screen name="Home" component={Home} />
+      <Drawer.Screen name="Reminder" component={reminderScreen} />
     </Drawer.Navigator>
   );
 }
@@ -88,6 +98,16 @@ export default function App() {
           }}
           name="Splash"
           component={splashScreen}
+        />
+        <Stack.Screen
+          options={{
+            transitionSpec: {
+              open: config,
+              close: config,
+            },
+          }}
+          name="Reminder"
+          component={reminderScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

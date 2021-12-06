@@ -2,64 +2,77 @@
  [
     {
       "point": {
-        "times": [
+        "morning": [
           {
-            "hours": 13,
-            "min": 30,
+            "dateTime": "09:30"
           }
         ],
-        "ref": "Perto do campo costa rica",
+        "evening": [
+          {
+            "dateTime": "17:30"
+          }
+        ],
+        "night": [
+          {
+            "dateTime": "21:00"
+          }
+        ],
+        "ref": "Próximo ao campo costa rica",
         "id": 1,
         "latitude": -21.288305503169436,
         "longitude": -50.32751672902611,
-        "price": 4.40,
+        "price": 3
       }
     },
     {
       "point": {
-        "times": [
+        "morning": [
           {
-            "hours": 09,
-            "min": 00,
+            "dateTime": "09:30"
           }
         ],
-        "ref": "Perto do campo costa rica",
+        "evening": [
+          {
+            "dateTime": "17:30"
+          }
+        ],
+        "night": [
+          {
+            "dateTime": "19:30"
+          }
+        ],
+        "ref": "",
         "id": 2,
         "latitude": -21.282999253078632,
         "longitude": -50.332597988538964,
-        "price": 4.40,
+        "price": 4
       }
     },
     {
       "point": {
-        "times": [
+        "morning": [
           {
-            "hours": 17,
-            "min": 30,
+            "dateTime": "09:30"
           }
         ],
-        "ref": "Perto do campo costa rica",
-        "id": 3,
-        "latitude": -21.2852225769709,
-        "longitude": -50.337620851990614,
-        "price": 4.40,
-      }
-    },
-    {
-      "point": {
-        "times": [
+        "evening": [
           {
-            "hours": 22,
-            "min": 40,
+            "dateTime": "17:30"
           }
         ],
-        "ref": "Perto do campo costa rica",
+        "night": [
+          {
+            "dateTime": "20:30"
+          }
+        ],
+        "ref": "",
         "id": 4,
         "latitude": -21.27817613938589,
         "longitude": -50.33480520295071,
-        "price": 4.40,
+        "price": 5
       }
     }
+    
   ]
 
 
