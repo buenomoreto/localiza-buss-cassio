@@ -12,7 +12,7 @@ export default function postItem(nome, rua, bairro, ref, horarioChegada) {
     .then((response) => {
       alert(response.data);
     }).catch((error) => {
-      alert(error.message);
+      console.log(error.message);
     });
 }
 export function deleteItem(id) {
@@ -22,6 +22,6 @@ export function deleteItem(id) {
   api.post('/delete', data).then((response) => {
     alert(response.data);
   }).catch((error) => {
-    alert(error.message);
+    console.log(error.message);
   });
 }

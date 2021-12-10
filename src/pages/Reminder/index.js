@@ -61,7 +61,7 @@ export default function Reminder() {
     api.get('/query').then((response) => {
       setListing(response.data);
     }).catch((error) => {
-      alert(error.message);
+      console.log(error.message);
     });
     if (typeof listing !== 'undefined') {
       listing.forEach((item) => {
