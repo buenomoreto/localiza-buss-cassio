@@ -1,78 +1,221 @@
 
  [
-    {
-      "point": {
-        "morning": [
-          {
-            "dateTime": "09:30"
-          }
-        ],
-        "evening": [
-          {
-            "dateTime": "17:30"
-          }
-        ],
-        "night": [
-          {
-            "dateTime": "21:00"
-          }
-        ],
-        "ref": "Próximo ao campo costa rica",
-        "id": 1,
-        "latitude": -21.288305503169436,
-        "longitude": -50.32751672902611,
-        "price": 3
-      }
-    },
-    {
-      "point": {
-        "morning": [
-          {
-            "dateTime": "09:30"
-          }
-        ],
-        "evening": [
-          {
-            "dateTime": "17:30"
-          }
-        ],
-        "night": [
-          {
-            "dateTime": "19:30"
-          }
-        ],
-        "ref": "",
-        "id": 2,
-        "latitude": -21.282999253078632,
-        "longitude": -50.332597988538964,
-        "price": 4
-      }
-    },
-    {
-      "point": {
-        "morning": [
-          {
-            "dateTime": "09:30"
-          }
-        ],
-        "evening": [
-          {
-            "dateTime": "17:30"
-          }
-        ],
-        "night": [
-          {
-            "dateTime": "20:30"
-          }
-        ],
-        "ref": "",
-        "id": 4,
-        "latitude": -21.27817613938589,
-        "longitude": -50.33480520295071,
-        "price": 5
-      }
+  {
+    "point": {
+      "morning": [
+        {
+          "dateTime": "09:30"
+        }
+      ],
+      "evening": [
+        {
+          "dateTime": "17:30"
+        }
+      ],
+      "night": [
+        {
+          "dateTime": "21:00"
+        }
+      ],
+      "ref": "Próximo ao campo costa rica",
+      "id": 1,
+      "latitude": "-21.288305503169436",
+      "longitude":"-50.32751672902611",
+      "price": 3
     }
-    
-  ]
+  },
+  {
+    "point": {
+      "morning": [
+        {
+          "dateTime": "09:30"
+        }
+      ],
+      "evening": [
+        {
+          "dateTime": "17:30"
+        }
+      ],
+      "night": [
+        {
+          "dateTime": "19:30"
+        }
+      ],
+      "ref": "",
+      "id": 2,
+      "latitude": "-21.282999253078632",
+      "longitude": "-50.332597988538964",
+      "price": 4
+    }
+  },
+  {
+    "point": {
+      "morning": [
+        {
+          "dateTime": "09:30"
+        }
+      ],
+      "evening": [
+        {
+          "dateTime": "17:30"
+        }
+      ],
+      "night": [
+        {
+          "dateTime": "20:30"
+        }
+      ],
+      "ref": "",
+      "id": 4,
+      "latitude": "-21.27817613938589",
+      "longitude": "-50.33480520295071",
+      "price": 5
+    }
+  },
+  {
+    "point": {
+      "morning": [
+        {
+          "dateTime": "08:00"
+        }
+      ],
+      "evening": [
+        {
+          "dateTime": "17:30"
+        }
+      ],
+      "night": [
+        {
+          "dateTime": "21:30"
+        }
+      ],
+      "ref": "Próximo a escola Hermínio", 
+      "id": 5,
+      "latitude": "-21.276345",
+      "longitude": "-50.325840",
+      "price": 2
+    }
+  },
+  {
+    "point": {
+      "morning": [
+        {
+          "dateTime": "06:00"
+        }
+      ],
+      "evening": [
+        {
+          "dateTime": "14:00"
+        }
+      ],
+      "night": [
+        {
+          "dateTime": "18:30"
+        }
+      ],
+      "ref": "Próximo a Unimed", 
+      "id": 6,
+      "latitude": "-21.286550",
+      "longitude": "-50.343223",
+      "price": 3
+    }
+  },
+  {
+    "point": {
+      "morning": [
+        {
+          "dateTime": "09:00"
+        }
+      ],
+      "evening": [
+        {
+          "dateTime": "16:00"
+        }
+      ],
+      "night": [
+        {
+          "dateTime": "19:30"
+        }
+      ],
+      "ref": "Próximo ao Cemiterio Da Consolação", 
+      "id": 7,
+      "latitude": "-21.302028",
+      "longitude": "-50.325294",
+      "price": 6
+    }
+  },
+  {
+    "point": {
+      "morning": [
+        {
+          "dateTime": "10:00"
+        }
+      ],
+      "evening": [
+        {
+          "dateTime": "15:00"
+        }
+      ],
+      "night": [
+        {
+          "dateTime": "22:30"
+        }
+      ],
+      "ref": "Próximo ao Super Muffato - Birigui ", 
+      "id": 8,
+      "latitude": "-21.297867",
+      "longitude": "-50.336924",
+      "price": 5
+    }
+  },
+  {
+    "point": {
+      "morning": [
+        {
+          "dateTime": "10:00"
+        }
+      ],
+      "evening": [
+        {
+          "dateTime": "15:00"
+        }
+      ],
+      "night": [
+        {
+          "dateTime": "22:30"
+        }
+      ],
+      "ref": "Próximo ao Tonin Superatacado ", 
+      "id": 9,
+      "latitude": "-21.302580",
+      "longitude": "-50.350543",
+      "price":  3
+    }
+  },
+  {
+    "point": {
+      "morning": [
+        {
+          "dateTime": "07:00"
+        }
+      ],
+      "evening": [
+        {
+          "dateTime": "17:00"
+        }
+      ],
+      "night": [
+        {
+          "dateTime": "20:00"
+        }
+      ],
+      "ref": "Próximo a Santa Casa de Misericórdia de Birigui", 
+      "id": 10,
+      "latitude": "-21.282109",
+      "longitude":" -50.336573",
+      "price":  2
+    }
+  }
+]
 
 

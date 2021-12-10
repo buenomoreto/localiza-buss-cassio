@@ -4,7 +4,6 @@ import React from 'react';
 import {
   Text,
   View,
-  TouchableHighlight,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { hours } from '../../../assets/css/Hours';

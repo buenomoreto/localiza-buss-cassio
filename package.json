@@ -14,10 +14,14 @@
     "@react-navigation/native-stack": "^6.2.5",
     "@react-navigation/stack": "6.0.6",
     "axios": "^0.23.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "expo": "~42.0.1",
     "expo-splash-screen": "~0.11.2",
     "expo-status-bar": "~1.0.4",
     "expo-updates": "~0.8.1",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "~0.63.4",
@@ -32,7 +36,10 @@
     "react-native-svg-transformer": "^0.14.3",
     "react-native-unimodules": "0.14.10",
     "react-native-vector-icons": "^9.0.0",
-    "react-native-web": "~0.13.12"
+    "react-native-web": "~0.13.12",
+    "save": "^2.4.0",
+    "sequelize": "^6.12.0-beta.1",
+    "sequelize-cli": "^6.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

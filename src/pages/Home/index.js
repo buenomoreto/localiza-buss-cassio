@@ -44,8 +44,8 @@ export default function Home() {
           key={item.point.id}
           onPress={() => { setPopup(LOCAL); setItemMark(item.point); }}
           coordinate={{
-            latitude: item.point.latitude,
-            longitude: item.point.longitude,
+            latitude: parseFloat(item.point.latitude),
+            longitude: parseFloat(item.point.longitude),
           }}
         >
           <View>
